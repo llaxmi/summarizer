@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        fredoka: ["var(--font-fredoka)", "sans-serif"],
+      },
     },
   },
   plugins: [],
