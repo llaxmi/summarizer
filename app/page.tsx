@@ -1,4 +1,4 @@
-import Upload from "./components/ui/Upload";
+import Upload from "./components/ui/upload";
 
 export default function PDFSummarizer() {
   return (
@@ -12,7 +12,6 @@ export default function PDFSummarizer() {
             Upload your PDF and get a quick summary in seconds.
           </p>
         </div>
-        {/* Ensure consistent rendering for the Upload component */}
         <Upload />
       </div>
     </div>

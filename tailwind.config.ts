@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         fredoka: ["var(--font-fredoka)", "sans-serif"],
+        quicksand: ["var(--font-quicksand)", "sans-serif"],
       },
     },
   },

@@ -1,6 +1,7 @@
 "use client";
 import { FileText, FileUp, Loader2, X } from "lucide-react";
 import { useState } from "react";
+import ReactMarkDown from "react-markdown";
 
 const Upload = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -21,6 +22,7 @@ const Upload = () => {
 
   const handleRemoveFile = () => {
     setFile(null);
+    setSummary(null);
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -124,12 +126,14 @@ const Upload = () => {
       </form>
 
       {summary && (
-        <div className="mt-8 bg-white rounded-lg shadow-lg">
+        <div className="mt-8 font-quicksand  bg-white rounded-lg shadow-lg">
           <div className="px-6 py-4 border-b border-gray-200">
-            <h3 className="text-xl font-bold text-gray-900">Summary</h3>
+            <h3 className="text-xl font-quicksand font-bold text-gray-900">
+              Summary
+            </h3>
           </div>
-          <div className="p-6 text-gray-700">
-            <p>{summary}</p>
+          <div className="p-6 text-gray-800 leading-relaxed">
+            <ReactMarkDown>{summary}</ReactMarkDown>
           </div>
         </div>
       )}
